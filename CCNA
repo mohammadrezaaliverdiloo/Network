@@ -1,1 +1,5 @@
-
+enable
+configure terminal
+interface .......
+ip address ...... subnet ....
+no shutdown

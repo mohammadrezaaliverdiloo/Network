@@ -1,5 +1,128 @@
+---------------------enable mode---------------------
+//show interface ans status
+enable
+show ip interface brief
+-
+//show interface information
+enable
+show interfaces <interface> 
+-
+//show ip interface
+enable
+show ip interface
+-
+//show version
+enable
+show version
+-
+//show protocols
+enable
+show protocols
+-
+//show running-config
+enable
+show running-config
+-
+//show flash
+enable
+show flash
+-
+//show history
+enable
+show history
+terminal history size <n>
+-
+//show clock
+enable
+show clock
+-
+//reload
+reload
+-
+//clear a specific rout ip
+enable
+clear ip route <addr>
+-
+//show arp
+enable 
+show arp
+-
+//debug icmp
+enable
+debug ip icmp
+no debug ip icmp
+-
+//show controllers and status and dte or dce
+enable
+show controllers <interface>
+-
+//show session
+enable
+show seassion
+-
+//show users
+enable
+show users
+--------------------------------configure terminal-------------------
+//domain lookup
+enable
+conf t
+no ip doamin-lookup
+-
+//banner
+enable
+conf t
+banner motd @"message"@
+-
+//save config
+enable
+copy running-config startup-config   ---or---- write
+-
+//erase config
+enable
+erase startup-config
+-
+//create username
+enable
+conf t
+username  <name> secret <pass>
+username <name> privilege 15 secret <pass>
+-
+//pass for enable mode
+enable
+conf t
+enable secret <pass>
+-
+//line vty
+enable
+conf t
+line vty 0 4
+password <pass>
+login
+-
+enable
+conf t
+line aux 0
+password <pass>
+login
+-
+enable
+conf t
+line console 0
+password <pass>
+login
+
+--------------------------
+//assign ip to an interface
 enable
 configure terminal
 interface .......
 ip address ...... subnet ....
 no shutdown
+---------------------------------
+//hostname
+enable
+configure terminal
+hostname <name>
+
+

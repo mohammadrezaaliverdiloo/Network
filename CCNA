@@ -111,7 +111,6 @@ conf t
 line console 0
 password <pass>
 login
-
 --------------------------
 //assign ip to an interface
 enable
@@ -124,5 +123,38 @@ no shutdown
 enable
 configure terminal
 hostname <name>
+------------------ route beetwen two router with serial interface------
+//route ip to DCE side
+enable
+conf t
+interface <int>
+ip addr <ip><sub>
+exit
+interface <serial>
+ip addr <ip><sub>
+clock rate
+no shutdown
+exit
+//route ip to DTE side
+interface <int>
+ip addr <ip><sub>
+exit
+interface <serial>
+ip addr <ip><sub>
+no shutdown
+exit
+------------------------------- ip route --------------
+enable
+conf t
+ip route <network> <mask> <address|interface> <distance> <permanet>
+no ip route <ip>
+--routing--
+1-assign ip to interfaces
+2-ip route for connected interfaces
+
+
+
+
+
 
 

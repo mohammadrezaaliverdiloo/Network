@@ -63,6 +63,18 @@ show seassion
 //show users
 enable
 show users
+-
+//ip route
+enable
+show ip route
+show ip route ospf
+show ip route bgp
+show ip bgp neighbors
+show ip bgp
+show ip bgp summary
+debug ip bgp
+
+
 --------------------------------configure terminal-------------------
 //domain lookup
 enable
@@ -152,9 +164,71 @@ no ip route <ip>
 1-assign ip to interfaces
 2-ip route for connected interfaces
 
+--------------------------ospf--------------------------
+1- assign ip to interfaces
+2- assign ip to serial
+3- route ospf <num>
+//set for every router
+4-network <ip> <sub>
 
 
+//authentication ospf
+1- assign ip to interfaces
+2- ip ospf authentication-key <pass>
 
 
+------------------------------------------------------------
+--------------------------switch----------------------------
+------------------------------------------------------------
+//vlan
+enable
+show vlan brief
+-
+//vlan
+enable
+conf t
+vlan <num>
+name <name>
+exit
+-
+//vlan
+vlan database 
+vlan <num> name <name>
+exit
+-
+//vlan
+enable
+conf t
+valn <n>
+name <name>
+shutdown vlan <n>
+interface <int>
+interface range <intersace range>
+switchport mode access
+switchport access vlan <name>
+-
+//
+conf t
+valn <n>
+name <name>
+shutdown vlan <n>
+interface <int>
+switchport mode trunk
+switchport trunk encapsulation dot1q
+switchport encapsulation negotiate
+
+----------vtp--------
+//vtp server
+enable
+conf t
+vtp mode server
+vtp domain <name>
+vtp password <pass>
+//vtp client
+enable
+conf t
+vtp mode client
+vtp domain <name>
+vtp password <name>
 
 

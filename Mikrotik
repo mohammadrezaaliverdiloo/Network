@@ -1,0 +1,24 @@
+--------------print-----------
+ip address print
+
+
+
+
+
+
+
+---------------ip-----------------------
+ip address add address=<ip> interface=<int>
+
+
+
+--------------------system------------------
+system licens print
+system password
+system license
+system reset-configuration
+system routerboard print
+
+
+
+

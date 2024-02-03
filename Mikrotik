@@ -1,24 +1,17 @@
---------------print-----------
+---------------ip-----------------------
+ip address add address=<ip> interface=<int>
 ip address print
 
 
-
-
-
-
-
----------------ip-----------------------
-ip address add address=<ip> interface=<int>
-
-
-
+ip firewall filter add chain=input sec-address=<ip> action=<accept/reject/drop>
 --------------------system------------------
 system licens print
 system password
-system license
 system reset-configuration
 system routerboard print
-
+system history print
+system clock print
+system clock set
 
 
 
